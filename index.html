@@ -24,14 +24,15 @@
         .header-section p { font-size: 1.2em; color: #555; margin-top: 10px; }
         
         .content-section { padding: 0 20px; }
-        .intro-story { text-align: center; } /* 중앙 정렬 추가 */
+        .intro-story { text-align: center; }
         .brand-story { display: flex; align-items: center; margin-bottom: 40px; flex-wrap: wrap; gap: 20px; }
         .brand-story .image-placeholder { flex: 1; min-width: 250px; background-color: #ddd; padding: 20px; text-align: center; border-radius: 8px; }
         .brand-story .text-content { flex: 2; min-width: 300px; }
 
         .product-category-title { font-size: 1.5em; font-weight: bold; margin-top: 40px; margin-bottom: 10px; border-bottom: 2px solid #5a7d7d; padding-bottom: 5px; }
 
-        .product-section { display: flex; align-items: flex-start; margin-bottom: 30px; padding: 25px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); flex-wrap: wrap; gap: 20px; }
+        /* 제품 이미지와 텍스트를 수직 중앙 정렬 */
+        .product-section { display: flex; align-items: center; margin-bottom: 30px; padding: 25px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); flex-wrap: wrap; gap: 20px; }
         /* 제품별 섹션 배경색을 파스텔톤으로 다르게 변경 */
         .product-section.pad { background-color: #fce4ec; }
         .product-section.serum { background-color: #f3e5f5; }
@@ -44,14 +45,15 @@
         .product-section .text-content { flex: 2; min-width: 300px; }
 
         .logo-section { text-align: center; margin-bottom: 40px; }
-        .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 20px; padding: 20px; background-color: #fafafa; border-radius: 12px; }
-        .logo-placeholder { background-color: #e0e0e0; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
+        /* 거래처 섹션 스타일 변경 */
+        .single-logo-container { background-color: #eeeeee; padding: 20px; border-radius: 12px; display: inline-block; }
+        .single-logo-container img { max-width: 100%; height: auto; }
 
         .button-section { text-align: center; padding: 20px 0; }
-        .homepage-button { padding: 15px 30px; font-size: 1.1em; color: white; background-color: #5a7d7d; border: none; border-radius: 50px; text-decoration: none; display: inline-block; cursor: pointer; transition: background-color 0.3s ease; }
+        .homepage-button { padding: 15px 30px; font-size: 1.1em; color: white; background-color: #5a7d7d; border: none; border-radius: 50px; text-decoration: none; display: inline-block; cursor: pointer; transition: background-color 0.3s ease; margin: 0 10px; } /* 마진 추가 */
         .homepage-button:hover { background-color: #4a6a6a; }
 
-        h2 { font-size: 2em; color: #5a7d7d; margin-top: 0; text-align: center; } /* 중앙 정렬 추가 */
+        h2 { font-size: 2em; color: #5a7d7d; margin-top: 0; text-align: center; }
         h3 { color: #5a7d7d; }
     </style>
 </head>
@@ -85,7 +87,7 @@
             <div class="image-placeholder">
     <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%BA%84%ED%94%84%EB%8C%80%ED%91%9C.jpg?raw=true" alt="inner confidence" style="width: 100%; height: auto;" />
 </div>
-<div class="text-content">
+            <div class="text-content">
                 <h2>Brand Value</h2>
                 <p>불필요한 것을 덜어내고 조화와 균형을 찾아가는 나만의 시간을 제안합니다.</p>
                 <p>나의 삶을 가치 있게 만드는 유익한 라이프 뷰티 Calmf_.</p>
@@ -109,7 +111,8 @@
             <h2>Our Products</h2>
             <h3 class="product-category-title">Skin Care</h3>
             
-            <div class="product-section pad"> <div class="image-placeholder">
+            <div class="product-section pad">
+    <div class="image-placeholder">
         <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%ED%8C%A8%EB%93%9C1.png?raw=true" alt="캄프 풋귤 플루이드 카밍패드" style="width: 100%; height: auto;" />
         <p style="text-align: center; margin-top: 5px;">캄프 풋귤 플루이드 카밍패드</p>
     </div>
@@ -135,7 +138,8 @@
     </div>
 </div>
 
-            <div class="product-section serum"> <div class="image-placeholder">
+            <div class="product-section serum">
+    <div class="image-placeholder">
         <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%84%B8%EB%9F%BC1.png?raw=true" alt="캄프 퀵 글로우 버블 세럼" style="width: 100%; height: auto;" />
         <p style="text-align: center; margin-top: 5px;">캄프 퀵 글로우 버블 세럼</p>
     </div>
@@ -159,7 +163,8 @@
     </div>
 </div>
 
-            <div class="product-section gel"> <div class="image-placeholder">
+            <div class="product-section gel">
+    <div class="image-placeholder">
         <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%9B%8C%ED%84%B01.png?raw=true" alt="캄프 워터드롭 카밍젤" style="width: 100%; height: auto;" />
         <p style="text-align: center; margin-top: 5px;">캄프 워터드롭 카밍젤</p>
     </div>
@@ -184,7 +189,8 @@
     </div>
 </div>
 
-            <div class="product-section film"> <div class="image-placeholder">
+            <div class="product-section film">
+    <div class="image-placeholder">
         <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%ED%95%84%EB%A6%841.png?raw=true" alt="캄프 멜팅 콜라겐 액티브 99.86 치크 필름" style="width: 100%; height: auto;" />
         <p style="text-align: center; margin-top: 5px;">캄프 멜팅 콜라겐 액티브 99.86 치크 필름</p>
     </div>
@@ -210,7 +216,8 @@
 
             <h3 class="product-category-title">Body Care</h3>
 
-            <div class="product-section handcream"> <div class="image-placeholder">
+            <div class="product-section handcream">
+    <div class="image-placeholder">
         <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%ED%95%B8%EB%93%9C%ED%81%AC%EB%A6%BC1.png?raw=true" alt="캄프 미스티 포레스트 퍼퓸드 핸드크림" style="width: 100%; height: auto;" />
         <p style="text-align: center; margin-top: 5px;">캄프 미스티 포레스트 퍼퓸드 핸드크림</p>
     </div>
@@ -235,7 +242,8 @@
 
             <h3 class="product-category-title">Health Care</h3>
             
-            <div class="product-section shake"> <div class="image-placeholder">
+            <div class="product-section shake">
+    <div class="image-placeholder">
         <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EB%8B%A8%EB%B0%B1%EC%A7%881.png?raw=true" alt="캄프 단백레시피 (단백질 쉐이크)" style="width: 100%; height: auto;" />
         <p style="text-align: center; margin-top: 5px;">캄프 단백레시피 (단백질 쉐이크)</p>
     </div>
@@ -260,54 +268,20 @@
 
         <section class="logo-section">
     <h2>캄프 주요 거래처</h2>
-    <div class="logo-grid">
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/w.png?raw=true" alt="W컨셉 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EB%84%A4%EC%9D%B4%EB%B2%84.jpg?raw=true" alt="네이버 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EB%A1%AF%EB%8D%B0%EA%B9%80%ED%8F%AC%EA%B3%B5%ED%95%AD.png?raw=true" alt="롯데백화점 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EB%A1%AF%EB%8D%B0%EC%98%A8.jpg?raw=true" alt="롯데온 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%8B%A0%EB%9D%BC.jpg?raw=true" alt="신라면세점 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%8B%A0%EC%84%B8%EA%B3%84%EB%A9%B4%EC%84%B8.jpg?raw=true" alt="신세계면세점 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%93%B1.jpg?raw=true" alt="SSG 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%95%84%ED%81%AC%EC%95%A4%EB%B6%81.png?raw=true" alt="아크앤북 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%97%90%EC%9D%B4%EB%B8%94%EB%A6%AC.png?raw=true" alt="에이블리 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%98%A5%EC%85%98.png?raw=true" alt="옥션 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%9C%84%EB%A9%94%ED%94%84.png?raw=true" alt="위메프 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%9D%B4%EB%A7%88%ED%8A%B8%EB%AA%B0.png?raw=true" alt="이마트몰 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%9D%B8%ED%84%B0%ED%8C%8C%ED%81%AC.png?raw=true" alt="인터파크 쇼핑 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%A7%80%EA%B7%B8%EC%9E%AC%EA%B7%B8.png?raw=true" alt="지그재그 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%A7%80%EB%A7%88%EC%BC%93.png?raw=true" alt="G마켓 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EC%BF%A0%ED%8C%A1.png?raw=true" alt="쿠팡 로고" style="height: 80px; width: auto;" />
-        </div>
-        <div class="logo-placeholder">
-            <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%ED%8B%B0%EB%AA%AC.png?raw=true" alt="티몬 로고" style="height: 80px; width: auto;" />
+    <div style="background-color: #eeeeee; padding: 20px; border-radius: 12px; text-align: center;">
+        <img src="https://github.com/mikary78/introduce_calmf/blob/main/images/%EB%84%A4%EC%9D%B4%EB%B2%84.jpg?raw=true" alt="네이버 로고" style="height: 80px; width: auto;" />
+    </div>
+</section>
+
+        <section class="button-section">
+            <a href="https://www.calmf.co.kr" class="homepage-button" target="_blank">
+                캄프 바로 가기!
+            </a>
+            <a href="https://smartstore.naver.com/calmf" class="homepage-button" target="_blank">
+                네이버 스마트스토어
+            </a>
+        </section>
+    </div>
+
+</body>
+</html>
